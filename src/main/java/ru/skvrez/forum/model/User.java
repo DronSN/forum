@@ -1,9 +1,18 @@
 package ru.skvrez.forum.model;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name = "users")
 public class User {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+    @Column
     private String firstName;
+    @Column
     private String secondName;
+    @Column
     private int age;
 
     public User() {

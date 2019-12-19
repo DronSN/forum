@@ -18,8 +18,5 @@
         <!-- Echo all executed SQL to stdout -->
         <property name="show_sql">true</property>
         <property name="hibernate.hbm2ddl.auto">update</property>
-        <mapping resource="message.cfg.xml"/>
-        <mapping resource="topic.cfg.xml"/>
-        <mapping resource="user.cfg.xml"/>
     </session-factory>
 </hibernate-configuration>

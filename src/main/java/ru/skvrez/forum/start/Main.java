@@ -5,7 +5,7 @@ import org.hibernate.Session;
 public class Main {
     public static void main(String[] args) {
 
-        Session session = HibernateUtils.getSessionFactory().openSession();
+        Session session = HibernateSessionFactoryUtil.getSessionFactory().openSession();
         session.beginTransaction();
 
         GenerateForumObjects forum = GenerateForumObjects.getInstance();

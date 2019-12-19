@@ -1,12 +1,20 @@
 package ru.skvrez.forum.model;
 
+import javax.persistence.*;
 import java.util.Date;
-
+@Entity
+@Table
 public class Message {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+    @ManyToOne(targetEntity = User.class)
     private User user;
+    @ManyToOne(targetEntity = Topic.class)
     private Topic topic;
+    @Column
     private Date date;
+    @Column
     private String message;
 
     public Message() {
